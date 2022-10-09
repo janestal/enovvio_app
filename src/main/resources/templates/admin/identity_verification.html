@@ -1,0 +1,150 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout/main :: common_header(~{::title},~{::content},~{::link},~{::script})">
+<head>
+    <title>Online Banking channels</title>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/plugins/bootstrap_select/bootstrap-select.min.css}">
+    <link th:href="@{/plugins/countryInput/niceCountryInput.css}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid px-4" th:fragment="content">
+        <div class="row my-4" style="background-color: white">
+            <div class="row mt-5">
+                    <div class="col-lg-1">
+                        <img style="width: 100%" th:src="@{/img/ab/1c.png}" class="img-responsive" />
+                    </div>
+                    <div class="col-lg-11 mt-3">
+                        <h3>Identity verification powered by a sophisticated neural network to combat fraud</h3>
+                    </div>
+                </div>
+            <div class="row mt-5 mb-2">
+                    <div class="col-lg-4">
+                        <img style="width: 100%" th:src="@{/img/ab/1d.png}" data="8" class="img-responsive" />
+                    </div>
+                    <div class="col-lg-8">
+                        <p class="identity_verify text-enovvio p-3">This application is designed to verify and confirm identities in over 200 countries and territories in a matter of seconds.</p>
+                        <img style="width: 100%" th:src="@{/img/ab/1e.png}" data="8" class="img-responsive" />
+                        <div class="identity_verify_form">
+                            <div class="row">
+                                <div class="select_field col-lg">
+                                    <div class="example selectpicker form-control"
+                                         data-selectedcountry="US"
+                                         data-showspecial="false"
+                                         data-showflags="true"
+                                         data-i18nall="All selected"
+                                         data-i18nnofilter="No selection"
+                                         data-i18nfilter="Filter">
+                                    </div>
+                                </div>
+                                <div class="button_field col-lg">
+                                    <a class="btn btn-primary" id="identityVerification"  data-bs-toggle="modal" href="#exampleModalToggle">ok</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog  modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Account Protection and Verification</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row mt-5">
+                            <div class="account_protection">
+                                <img th:src="@{/img/account/account.png}" class="img-fluid" />
+                                <p>First Principles to Zero Trust</p>
+                            </div>
+                            <div class="col-lg-8 col-md-12 col-sm-12 mt-3">
+                                <div class="account_protection_verif">
+                                    <div class="box_img d-flex justify-content-center">
+                                        <img th:src="@{/img/account/geo.png}" class="img-fluid" />
+                                    </div>
+                                    <div class="box_text">
+                                        <h4>Geolocation</h4>
+                                        <ul>
+                                            <li>Geocode your addresses to enhance your security</li>
+                                            <li>This prevents malicious sources from using your addresses</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="account_protection_verif">
+                                    <div class="box_img d-flex justify-content-center">
+                                        <img th:src="@{/img/account/email.png}" class="img-fluid" />
+                                    </div>
+                                    <div class="box_text">
+                                        <h4>Email Address</h4>
+                                        <ul>
+                                            <li>Verify your email adresses for security</li>
+                                            <li>It stops phishing attacks, prevents fraud, block malware delivery</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="account_protection_verif">
+                                    <div class="box_img d-flex justify-content-center">
+                                        <img th:src="@{/img/account/phone.png}" class="img-fluid" />
+                                    </div>
+                                    <div class="box_text">
+                                        <h4>Phone Numbers</h4>
+                                        <ul>
+                                            <li>Get early alerts to possible identity threats</li>
+                                            <li>Detects threats to your identity and alerts you</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="account_protection_verif">
+                                    <div class="box_img d-flex justify-content-center">
+                                        <img th:src="@{/img/account/phone.png}" class="img-fluid" />
+                                    </div>
+                                    <div class="box_text">
+                                        <h4>ID Verification</h4>
+                                        <ul>
+                                            <li>Keep track of your records and identify any suspicious activity</li>
+                                            <li>Zero tolerance for fraud with our zero trust approach</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 col-sm-12 d-flex justify-content-center">
+                                <div class="check_info">
+                                    <a class="btn btn-enovvio p-2">
+                                        Verify your information
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" th:src="@{/plugins/bootstrap_select/bootstrap-select.min.js}"></script>
+<script type="text/javascript" th:src="@{/plugins/countryInput/niceCountryInput.js}"></script>
+<!--<script type="text/javascript" th:src="@{/plugins/country_selector/js/jquery.countrySelector.js}"></script>-->
+<script type="text/javascript">
+    // $("#alpha2").countrySelector({ codeMode: "alpha2" });
+
+    $(function(){
+        new NiceCountryInput($(".example")).init();
+    });
+
+    // $("#identityVerification").click(function (){
+    //     var selected = $(".example .niceCountryInputMenuDefaultText span").text();
+    //     $('#exampleModalToggle').show();
+    // });
+
+    $('#identityVerification').on('click', function() {
+        $('#exampleModalToggle').show();
+    });
+</script>
+</html>

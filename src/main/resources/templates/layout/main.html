@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      th:fragment="common_header(title, content, links, scripts)">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title th:replace="${title}">Base App</title>
+        <!-- Common styles and scripts -->
+        <link rel="shortcut icon" th:href="@{/images/favicon.ico}">
+        <link rel="stylesheet" type="text/css" media="all" th:href="@{/plugins/jquery_confirm/jquery-confirm.min.css}">
+        <link rel="stylesheet" type="text/css" media="all" th:href="@{/plugins/loader/loader.css}">
+        <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/stylesheet.css}">
+        <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/bootstrap.min.css}">
+        <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/design.css}">
+        <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/all.css}">
+        <th:block th:replace="${links}" />
+        <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/animate.min.css}">
+        <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/styles.css}">
+
+        <!--/* Per-page placeholder for additional links */-->
+    </head>
+    <body class="sb-nav-fixed">
+    <div id="fakeloader-overlay" class="visible incoming">
+        <div class="loader-wrapper-outer">
+            <div class="loader-wrapper-inner">
+                <div class="loader"></div>
+            </div>
+        </div>
+    </div>
+
+        <div th:replace="fragments/topnav :: topnav">Top navbar</div>
+
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-enovvio" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div th:replace="fragments/sidenav :: sidenav">Top navbar</div>
+                    </div>
+                    <div class="sb-sidenav-footer" sec:authorize="isAuthenticated()">
+                        <div class="small">Logged in as:</div>
+                        <div th:text="${#strings.capitalize(#authentication.name)}">Username </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div th:replace="${content}">A placeholder for real content.</div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Enovvio 2022</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+        <script type="text/javascript" th:src="@{/js/bootstrap.bundle.min.js}"></script>
+        <script type="text/javascript" th:src="@{/plugins/jquery_confirm/jquery-confirm.min.js}"></script>
+        <script type="text/javascript" th:src="@{/plugins/loader/fakeloader.min.js}"></script>
+        <script type="text/javascript" th:src="@{/js/scripts.js}"></script>
+        <th:block th:replace="${scripts}" />
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout/main :: common_header(~{::title},~{::content},~{},~{})">
+<head>
+    <title>Getting Started</title>
+</head>
+<body>
+<div class="container-fluid px-4 py-4 " th:fragment="content">
+    <div class="row px py-4-4">
+        <h5>Getting started with our Identity Manager Tools</h5>
+        <p>Welcome to Enovvio! Please take a 3-step tour to learn how to activate Identity guard and other services on your account.</p>
+    </div>
+    <div class="row py-4">
+        <div class="container getting_started">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="getting_started_left">
+                        <img th:src="@{/img/getting_started.png}" class="img-responsive"/>
+                    </div>
+                </div>
+                <div class="col-lg-6" style="border-left: 1px solid #DEDEDE;">
+                    <div class="getting_started_right py-4">
+                        <div class="gettingStarted">
+                            <div class="gs_step">
+                                <p><span class="gs_circle"></span> Activate Identity guard</p>
+                            </div>
+                            <div class="gs_content">
+                                <p>On the left bar menu, follow the Identity control link which will take you to the Identity Manager home page and click on the activate button.</p>
+                                <a href="" class="btn btn-enovvio">Show Me How</a>
+                            </div>
+                        </div>
+
+                        <div class="gettingStarted">
+                            <div class="gs_step">
+                                <p><span class="gs_circle"></span> Use online banking tools</p>
+                            </div>
+                            <div class="gs_content">
+                                <p>There is a list of banks that we recommend that have the safest financial platform for your use.
+                                    You can choose any of them to open your online banking account safely to help block malicious financial malware.  Follow the Get started button.</p>
+                                <a href="" class="btn btn-enovvio">Show Me How</a>
+                            </div>
+                        </div>
+
+                        <div class="gettingStarted">
+                            <div class="gs_step">
+                                <p><span class="gs_circle"></span> Get advanced malware software</p>
+                            </div>
+                            <div class="gs_content">
+                                <p>For better performance, you are required to get the endpoint protection that protects your servers and devices. Use the get started button to get it and install it on your devices.</p>
+                                <a href="" class="btn btn-enovvio">Show Me How</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

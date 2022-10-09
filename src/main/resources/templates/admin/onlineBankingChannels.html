@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout/main :: common_header(~{::title},~{::content},~{},~{})">
+<head>
+    <title>Online Banking channels</title>
+</head>
+    <body>
+        <div class="container-fluid px-4" th:fragment="content">
+            <h5 class="mt-4">Online Banking channels</h5>
+            <ol class="breadcrumb mb-4">
+                <li class="breadcrumb-item active">Dashboard</li>
+                <li class="breadcrumb-item active">Online Banking channels</li>
+            </ol>
+
+            <div class="row my-4">
+                <h5>Checking and Saving Accounts</h5>
+                <p>Uncover banking technologies from our trusted partners to help modernize all aspects of financial services including online banking, mobile apps, real-time chatbots and cybersecurity.</p>
+                <div class="col-lg-12" style="background-color: #e7e6e6; padding-top: 10px;">
+                    <div class="row">
+
+                        <div class="col-lg-4">
+                            <div class="online_banking active" data="ob_content1">
+                                <p class="t my-2">Axos Rewards Checking</p>
+                                <p>Earn up to 1.25% APY. No maintenance fees. No non-sufficient fund fees. No minimum balance requirements. Plus, unlimited domestic ATM fee reimbursements. Open today, compound tomorrow.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="online_banking" data="ob_content2">
+                                <p class="t my-2">Axos Essential Checking</p>
+                                <p>Essential Checking. No fees. Unlimited domestic ATM fee reimbursements. Essential Checking helps you stay ahead of the challenges of modern life. This is checking, evolved.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="online_banking" data="ob_content3">
+                                <p class="t my-2">Axos Cashback Checking</p>
+                                <p>Want to get paid for shopping? Earn cash back on all transactions that require a signature. Take your money further, faster.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row py-2">
+                        <div class="col-lg-12" id="ob_content1">
+                            <div class="card">
+                                <div class="card-body">
+                                    <span class="close_button"><i class="fa-solid fa-xmark"></i></span>
+                                    <img th:src="@{/img/axios.png}" class="axios_head">
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <h5>Banking that rewards you.</h5>
+                                            <ul class="nav flex-column">
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>Zero monthly maintenance fees</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>Online debit card management</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>No need to keep a minimum balance to avoid fees</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>No overdraft or non-sufficient fund fees</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>Only $50 to open an account </span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <img th:src="@{/img/content_1.png}" id="content_img1">
+                                            <p class="d-flex align-items-center py-2">
+                                                <a class="btn btn-enovvio" href="https://fxo.co/1282206/enovvio" style="display: inline-block; margin: 0 auto;">OPEN AN ACCOUNT</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-12" id="ob_content2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <span class="close_button"><i class="fa-solid fa-xmark"></i></span>
+                                    <img th:src="@{/img/axios.png}" class="axios_head">
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <h5>Banking that rewards you.</h5>
+                                            <ul class="nav flex-column">
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>Unlimited domestic ATM fee reimbursements</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>No monthly maintenance fees</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>No need to keep a minimum balance to avoid fees</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>No overdraft or non-sufficient fund fees</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>Only $50 to open an account </span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <img th:src="@{/img/content_2.png}" id="content_img2">
+                                            <p class="d-flex align-items-center py-2">
+                                                <a class="btn btn-enovvio" href="https://fxo.co/1282206/EssentialChecking" style="display: inline-block; margin: 0 auto;">OPEN AN ACCOUNT</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-12" id="ob_content3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <span class="close_button"><i class="fa-solid fa-xmark"></i></span>
+                                    <img th:src="@{/img/axios.png}" class="axios_head">
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <h5>Banking that rewards you.</h5>
+                                            <ul class="nav flex-column">
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"><span>Earn up to 1.00%1 cash back </span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"><span>Unlimited domestic ATM fee reimbursement</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"><span>No monthly maintenance fees</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"><span>Unlimited check writing privileges</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"><span>Unlimited check writing privileges</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <img th:src="@{/img/ab/g.png}" id="content_img3">
+                                            <p class="d-flex align-items-center py-2">
+                                                <a class="btn btn-enovvio" href="https://fxo.co/1282206/Cashback" style="display: inline-block; margin: 0 auto;">OPEN AN ACCOUNT</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-4">
+                            <div class="online_banking" data="ob_content4">
+                                <p class="t my-2">Axos High Yield Savings</p>
+                                <p>The Axos Bank High Yield Savings Account comes with a competitive APY and has no minimum balance requirements or monthly fees, making this a nice account to earn money on.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="online_banking" data="ob_content5">
+                                <p class="t my-2">Cit Savings Builder</p>
+                                <p>Earn one of the nation's top rates — 8x the national average. Get 0.797% interest rate from the day the account is opened through the first Evaluation Day. Deposit checks remotely with Cit bank mobile app.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="online_banking" data="ob_content6">
+                                <p class="t my-2">Cit Savings Connect</p>
+                                <p>Boost your savings with Savings Connect. Get a competitive rate with a Savings Connect account and the benefits of easy access to your funds.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row py-2">
+                        <div class="col-lg-12" id="ob_content4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <span class="close_button"><i class="fa-solid fa-xmark"></i></span>
+                                    <img th:src="@{/img/axios.png}" class="axios_head">
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <h5>Banking that rewards you.</h5>
+                                            <ul class="nav flex-column">
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>No monthly maintenance fees</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>No minimum balance to avoid fees</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>0.61% APY on balances up to $24,999.99</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>Free ATM card upon request</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>$250 minimum deposit to open account</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <img th:src="@{/img/content_4.png}" id="content_img4">
+                                            <p class="d-flex align-items-center py-2">
+                                                <a class="btn btn-enovvio" href="https://fxo.co/1282206/High Yield Savings" style="display: inline-block; margin: 0 auto;">OPEN AN ACCOUNT</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-12" id="ob_content5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <span class="close_button"><i class="fa-solid fa-xmark"></i></span>
+                                    <img th:src="@{/img/citybank.svg}" class="axios_head">
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <ul class="nav flex-column">
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>No account opening or maintenance fees</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>Daily compounding interest</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>Multi-tiered account</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>Minimum deposit of $100 to open</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"> <span>Monthly $100 deposit requirement for highest APY</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <img th:src="@{/img/content_5.png}" id="content_img5">
+                                            <p class="d-flex align-items-center py-2">
+                                                <a class="btn btn-enovvio" href="https://www.jdoqocy.com/click-100557268-12955572" style="display: inline-block; margin: 0 auto;">OPEN AN ACCOUNT</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-12" id="ob_content6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <span class="close_button"><i class="fa-solid fa-xmark"></i></span>
+                                    <img th:src="@{/img/citybank.svg}" class="axios_head">
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <ul class="nav flex-column">
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"><span>Earn over 16x the national average</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"><span>Digital convenience with online banking</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"><span>Deposit checks remotely and make transfers easily</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"><span>UMinimum deposit of $100 to open</span></li>
+                                                <li class="nav-item"><img th:src="@{/img/check.svg}"><span>Easy account opening and FDIC-insured</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <img th:src="@{/img/content_6.png}" id="content_img6">
+                                            <p class="d-flex align-items-center py-2">
+                                                <a class="btn btn-enovvio" href="https://www.kqzyfj.com/click-100557268-14465611" style="display: inline-block; margin: 0 auto;">OPEN AN ACCOUNT</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

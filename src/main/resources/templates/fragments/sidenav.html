@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+  <head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+  </head>
+  <body>
+    <div id="sidebar_left" th:fragment="sidenav" class="nav my-3" sec:authorize="isAuthenticated()">
+      <a class="nav-link" th:href="@{/access/home}"  >
+        <div class="sb-nav-link-icon"><img th:src="@{/img/icon/0.png}"  data="0" /></div>
+        Dashboard
+      </a>
+      <a class="nav-link" th:href="@{/access/getting_started}">
+        <div class="sb-nav-link-icon"><img th:src="@{/img/icon/3.png}" data="3" /></div>
+        Getting Started
+      </a>
+      <a class="nav-link" th:href="@{/access/identity_control}">
+        <div class="sb-nav-link-icon"><img th:src="@{/img/icon/1.png}" data="1" /></div>
+        Identity Control
+      </a>
+      <a class="nav-link" th:href="@{/access/online_banking_channels}">
+        <div class="sb-nav-link-icon"><img th:src="@{/img/icon/2.png}" data="2" /></div>
+        Trusted ebanking
+      </a>
+      <a class="nav-link" th:href="@{/access/more_solutions}" th:classappend="${module == 'more_solutions' ? 'active' : ''}">
+        <div class="sb-nav-link-icon"><img th:src="@{/img/icon/4.png}" data="4"  /></div>
+        More Solutions
+      </a>
+      <a class="nav-link" th:href="@{/access/contact_us}">
+        <div class="sb-nav-link-icon"><img th:src="@{/img/icon/5.png}" data="5"  /></div>
+        Customer Support
+      </a>
+      <a class="nav-link" th:href="@{/access/settings}">
+        <div class="sb-nav-link-icon"><img th:src="@{/img/icon/6.png}" data="6"  /></div>
+        Settings
+      </a>
+    </div>
+  </body>
+</html>

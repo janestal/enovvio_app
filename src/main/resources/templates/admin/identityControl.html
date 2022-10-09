@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+ th:replace="layout/main :: common_header(~{::title},~{::content},~{::link},~{})">
+    <head>
+        <title>Identity Control</title>
+        <link th:href="@{/css/modal.css}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid px-4" th:fragment="content">
+            <h4 class="mt-4">Identity Control</h4>
+            <ol class="breadcrumb mb-4">
+                <li class="breadcrumb-item">Dashboard</li>
+                <li class="breadcrumb-item active">Identity Control</li>
+            </ol>
+            <div class="row my-4">
+                <div class="col-lg-5">
+                    <div class="card">
+                        <div class="card-body identity_control">
+                            <h5 style="font-size: 1em; ">Identity Guard</h5>
+                            <div class="row">
+                                <div class="col-lg-8" style="font-size:0.9em;">
+                                    <p>Block malicious financial malware and protect your User ID, Password, and other sensitive information.</p>
+                                </div>
+                                <div class="col-lg-4">
+                                    <img th:src="@{/img/services/Identity Guard.png}"  class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <a class="btn btn-outline-enovvio" href="/access/global_identity_cyber_protection">Activate</a>
+                            <a class="btn btn-outline-enovvio">Login</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card">
+                        <div class="card-body identity_control">
+                            <h5 style="font-size: 1em; ">Banking Technologies</h5>
+                            <div class="row">
+                                <div class="col-lg-8" style="font-size:0.9em;">
+                                    <p>Stop financial malware from tampering with your transaction; ebanking with our safest banking channel.</p>
+                                </div>
+                                <div class="col-lg-4">
+                                    <img th:src="@{/img/services/Banking Technology.png}" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <a class="btn btn-outline-enovvio" th:href="@{/access/online_banking_channels}">Get started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-4">
+                <div class="col-lg-5">
+                    <div class="card">
+                        <div class="card-body identity_control">
+                            <h5 style="font-size: 1em;">Endpoint Protection</h5>
+                            <div class="row">
+                                <div class="col-lg-8" style="font-size:0.9em;">
+                                    <p>Protect servers and devices with advanced malware software, featuring threats detection, proactive blocking, and remediation.</p>
+                                </div>
+                                <div class="col-lg-4">
+                                    <img th:src="@{/img/services/Endpoint Protection.png}" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <button type="button" data-direction="top-right" class="btn btn btn-outline-enovvio" data-bs-toggle="modal" data-bs-target="#EndpointProtection">
+                                Get started
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card">
+                        <div class="card-body identity_control">
+                            <h5 style="font-size: 1em;">Internet of Things</h5>
+                            <div class="row">
+                                <div class="col-lg-8" style="font-size:0.9em;">
+                                    <p>Remotely access, control and manage your embedded devices, industrial control panels, and PLCs from anywhere.</p>
+                                </div>
+                                <div class="col-lg-4">
+                                    <img th:src="@{/img/services/Internet of Things.png}" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <button type="button" data-direction="top-right" class="btn btn btn-outline-enovvio" data-bs-toggle="modal" data-bs-target="#EndpointProtection">
+                                Get started
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="EndpointProtection" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Contact Us</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card">
+                                <div class="card-body" style="background-color: #FEFEFE;">
+                                    <form>
+                                        <h6>Details</h6>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 input-field">
+                                                <label for="date">Date</label>
+                                                <input type="date" class="form-control" id="date">
+                                            </div>
+                                            <div class="form-group col-md-6 input-field">
+                                                <label for="timezone">Timezome</label>
+                                                <input type="time" class="form-control" id="timezone">
+                                            </div>
+                                        </div>
+                                        <h6>Contact information</h6>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 input-field">
+                                                <label for="firstname">First name</label>
+                                                <input type="text" class="form-control" id="firstname">
+                                            </div>
+                                            <div class="form-group col-md-6 input-field">
+                                                <label for="lastname">Last name</label>
+                                                <input type="password" class="form-control" id="lastname">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 input-field">
+                                                <label for="email">Email address</label>
+                                                <input type="email" class="form-control" id="email">
+                                            </div>
+                                            <div class="form-group col-md-6 input-field">
+                                                <label for="phone">Phone number</label>
+                                                <input type="phone" class="form-control" id="phone">
+                                            </div>
+                                        </div>
+                                        <div class="form-group input-field">
+                                            <label for="company">Subject</label>
+                                            <input type="text" class="form-control" id="company">
+                                        </div>
+                                        <div class="form-group input-field">
+                                            <label for="message_contact">Please describe your issue</label>
+                                            <textarea name="" id="message_contact" rows="5" class="form-control"></textarea>
+                                        </div>
+                                        <p>
+                                            Enovvio is committed to protecting and respecting your privacy, and we’ll only use your personal information to administer your account and to provide the products and services you requested from us. From time to time, we would like to contact you about our products and services, as well as other content that may be of interest to you. If you consent to us contacting you for this purpose, please tick below to say how you would like us to contact you:
+                                        </p>
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                <label class="form-check-label" for="gridCheck">
+                                                    I agree to receive other communications from Enovvio
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">
+                                            Submit
+                                            <i class="fa-solid fa-arrow-right-long mx-3"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </body>
+</html>

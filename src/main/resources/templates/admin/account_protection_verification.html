@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout/main :: common_header(~{::title},~{::content},~{},~{})">
+<head>
+  <title>Account Protection and Verification</title>
+</head>
+<body>
+<div class="container-fluid px-4" th:fragment="content">
+  <div class="row mt-5">
+    <h3>Account Protection and Verification</h3>
+    <div class="account_protection mt-4">
+      <img th:src="@{/img/account/account.png}" class="img-fluid" />
+      <p>First Principles to Zero Trust</p>
+    </div>
+    <div class="col-lg-7 mt-3">
+      <div class="account_protection_verif">
+        <div class="box_img d-flex justify-content-center">
+          <img th:src="@{/img/account/geo.png}" class="img-fluid" />
+        </div>
+        <div class="box_text">
+          <h4>Geolocation</h4>
+          <ul>
+            <li>Geocode your addresses to enhance your security</li>
+            <li>This prevents malicious sources from using your addresses</li>
+          </ul>
+        </div>
+      </div>
+      <div class="account_protection_verif">
+        <div class="box_img d-flex justify-content-center">
+          <img th:src="@{/img/account/email.png}" class="img-fluid" />
+        </div>
+        <div class="box_text">
+          <h4>Email Address</h4>
+          <ul>
+            <li>Verify your email adresses for security</li>
+            <li>It stops phishing attacks, prevents fraud, block malware delivery</li>
+          </ul>
+        </div>
+      </div>
+      <div class="account_protection_verif">
+        <div class="box_img d-flex justify-content-center">
+          <img th:src="@{/img/account/phone.png}" class="img-fluid" />
+        </div>
+        <div class="box_text">
+          <h4>Phone Numbers</h4>
+          <ul>
+            <li>Get early alerts to possible identity threats</li>
+            <li>Detects threats to your identity and alerts you</li>
+          </ul>
+        </div>
+      </div>
+      <div class="account_protection_verif">
+        <div class="box_img d-flex justify-content-center">
+          <img th:src="@{/img/account/phone.png}" class="img-fluid" />
+        </div>
+        <div class="box_text">
+          <h4>ID Verification</h4>
+          <ul>
+            <li>Keep track of your records and identify any suspicious activity</li>
+            <li>Zero tolerance for fraud with our zero trust approach</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 d-flex justify-content-center">
+      <div class="check_info">
+        <a class="btn btn-enovvio p-2">
+          Verify your information
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

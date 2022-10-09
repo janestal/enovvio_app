@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      th:replace="layout/main :: common_header(~{::title},~{::content},~{},~{})">
+    <head>
+        <title>Contact us</title>
+    </head>
+    <body>
+        <div class="container-fluid px-4" th:fragment="content">
+            <div class="row my-4">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body" style="background-color: #FEFEFE;">
+                            <form>
+                                <h6>Details</h6>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6 input-field">
+                                        <label for="date">Date</label>
+                                        <input type="date" class="form-control" id="date">
+                                    </div>
+                                    <div class="form-group col-md-6 input-field">
+                                        <label for="timezone">Timezome</label>
+                                        <input type="time" class="form-control" id="timezone">
+                                    </div>
+                                </div>
+                                <h6>Contact information</h6>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6 input-field">
+                                        <label for="firstname">First name</label>
+                                        <input type="text" class="form-control" id="firstname">
+                                    </div>
+                                    <div class="form-group col-md-6 input-field">
+                                        <label for="lastname">Last name</label>
+                                        <input type="password" class="form-control" id="lastname">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6 input-field">
+                                        <label for="email">Email address</label>
+                                        <input type="email" class="form-control" id="email">
+                                    </div>
+                                    <div class="form-group col-md-6 input-field">
+                                        <label for="phone">Phone number</label>
+                                        <input type="phone" class="form-control" id="phone">
+                                    </div>
+                                </div>
+                                <div class="form-group input-field">
+                                    <label for="company">Subject</label>
+                                    <input type="text" class="form-control" id="company">
+                                </div>
+                                <div class="form-group input-field">
+                                    <label for="message_contact">Please describe your issue</label>
+                                    <textarea name="" id="message_contact" rows="5" class="form-control"></textarea>
+                                </div>
+                                <p>
+                                    Enovvio is committed to protecting and respecting your privacy, and we’ll only use your personal information to administer your account and to provide the products and services you requested from us. From time to time, we would like to contact you about our products and services, as well as other content that may be of interest to you. If you consent to us contacting you for this purpose, please tick below to say how you would like us to contact you:
+                                </p>
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                            I agree to receive other communications from Enovvio
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    Submit
+                                    <i class="fa-solid fa-arrow-right-long mx-3"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact_us">
+                        <h5><i class="fa-solid fa-comments px-4"></i>Chat with agent</h5>
+                        <hr />
+                        <table class="table">
+                            <tr>
+                                <td><i class="fa-solid fa-square-phone px-2"></i></td>
+                                <td>1 888 519 0227</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-envelope px-2"></i></td>
+                                <td>contact@enovvio.com</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-circle-info px-2"></i></td>
+                                <td>Please note that live support is available from 9am to 5pm And Online support is available 24 hours a day managed by our AI</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <nav th:fragment="topnav" class="sb-topnav navbar navbar-expand navbar-enovvio bg-enovvio">
+  <!-- Navbar Brand-->
+  <a class="navbar-brand ps-3" th:href="@{/dashboard}">
+    <img th:src="@{/img/logo.png}"  class="img-responssive" style="width: 95%"/>
+  </a>
+  <!-- Sidebar Toggle-->
+  <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+  <!-- Navbar Search-->
+  <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+  </form>
+  <!-- Navbar-->
+  <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+    <li class="nav-item"><a class="nav-link"><i class="fa-solid fa-bell"></i></a></li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-user fa-fw"></i>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item"  th:href="@{/access/settings}">Settings</a></li>
+        <li><hr class="dropdown-divider" /></li>
+        <li sec:authorize="isAuthenticated()"><a class="dropdown-item" th:href="@{/access/secure_plateforme}">Secure plateform</a></li>
+        <li sec:authorize="isAuthenticated()"><a class="dropdown-item" th:href="@{/access/identity_verification}">Identity verification</a></li>
+        <li sec:authorize="isAuthenticated()"><a class="dropdown-item" th:href="@{/logout}">Logout</a></li>
+        <li sec:authorize="!isAuthenticated()"><a class="dropdown-item" th:href="@{/sso/login}">Login</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</body>
+</html>
