@@ -9,9 +9,9 @@ import javax.annotation.security.RolesAllowed;
 @Controller
 public class PublicController {
 
-//    @GetMapping("")
-//    public String pageIndex(){
-//        return "pages/index";
-//    }
+    @GetMapping("")
+    public String pageIndex(){
+        return "pages/index";
+    }
 
 }

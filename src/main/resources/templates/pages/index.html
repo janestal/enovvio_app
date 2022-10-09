@@ -7,27 +7,9 @@
     <body>
         <div class="container-fluid px-4" th:fragment="content">
            <div class="row main_header">
-               <h3>Security resilience for the unpredictable</h3>
+               <h3>Welcome</h3>
            </div>
-            <div class="row my-2 main_">
-                <div class="col-lg-6">
-                    <div class=" main_content">
-                        <h5 class="py-3">Hi <span th:text="${#strings.capitalize(#authentication.name)}"></span>! Welcome to Enovvio Secure</h5>
-                        <p>From operations to finances to supply chain, uncertainty emerges around every corner for consumers and businesses today.</p>
-                        <p>Investing in resilience — the ability to withstand unforeseen shocks and loom stronger. But these investments will fall short without one key piece: security resilience.</p>
-                        <p>Invest in security resilience with Enovvio Secure. Our platform is open and infused with the latest threat data, enabling you to eliminate security gaps, utilize already-existing security investments, and prioritize alerts by importance.</p>
-                        <p style="text-align:center; margin-top: 20px;">
-                            <a class="btn btn-enovvio">Choose your path to secure what really matters!</a>
-                        </p>
-                    </div>
-                    <div class="banner_bottom">
-                        <img th:src="@{/img/banner.png}"  class="img-responsive py-4">
-                    </div>
-                </div>
-                <div class="col-lg-6 py-4">
-                    <img th:src="@{/img/security_resilience.png}"  class="img-responsive py-4" id="security_resilience">
-                </div>
-            </div>
+           
         </div>
     </body>
 </html>

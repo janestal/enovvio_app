@@ -10,10 +10,10 @@ import javax.annotation.security.RolesAllowed;
 @RequestMapping("/access")
 public class DashboardController {
 
-    @GetMapping("")
-    public String adminDashboard(){
-        return "redirect:/home";
-    }
+//    @GetMapping("")
+//    public String adminDashboard(){
+//        return "redirect:/home";
+//    }
 
     @GetMapping("/home")
     public String dahboard(){
